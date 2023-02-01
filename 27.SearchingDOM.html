@@ -1,0 +1,56 @@
+<!--
+*IMPORTANT
+When we do document.getElementById we get a single element but when we do document.getElementsByClassName we get an array of elements so we cannot store them in a single varible
+The .operator must only be used when we are using the querySelector and QuerySelectorAll methods
+ -->
+ <!--
+The various methods are
+1.getElementById
+2.getElementsByClassName
+3.querySelector
+4.querySelectorAll
+5.getElementsByTagName (searches all elements by HTML tags)
+6.getElementsByName (seaches an elements with the name attribute)
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching the DOM</title>
+</head>
+<body>
+    <div class="card" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1420593248178-d88870618ca0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80" class="card-img-top" alt="..." style="height: 250px;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Card title2</h5>
+          <h5 class="card-title">Card title3</h5>
+          <p name="anchortag" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a  href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+</body>
+<script>
+let a = document.getElementsByClassName("card-title")[0]
+a.style.color="red"
+
+let b = document.querySelectorAll(".card-title")
+b[1].style.color = "blue"
+b[2].style.color = "green"
+
+// if we only want to select only one element of a class we will use querySelector
+let c = document.querySelector(".card-text")
+c.style.color="aqua"
+
+console.log(document.getElementsByTagName("h5"))
+let d = (document.getElementsByTagName("div"))
+console.log(d[0].firstElementChild.style.height="500px")
+
+let e = document.getElementsByName("anchortag")
+console.log(e)
+
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML attributes and methods</title>
+</head>
+<body>
+<div id="first" class="hey" >
+     I am the first container
+</div>
+</body>
+<script>
+//1. to fetch the class of an element we use the ele.getAttribute() method
+let b = document.getElementById("first")
+console.log(b.getAttribute("class"))
+// 2. now to check if a certain attribute was applied on an element or not we will use ele.hasAttribute()
+console.log(b.hasAttribute("class"))
+console.log(b.hasAttribute("style"))
+
+//3.to set an attribute of a tag we will use the ele.setAttribute which takes 2 arguments,so it will replace the hey class with the two classes default and public
+b.setAttribute("class","default public")
+console.log(b.outerHTML)
+
+//4.now to remove an attribute we can use the remove attribute method
+b.removeAttribute("class","default public")
+console.log("The element does not have the class attribute",b.hasAttribute("class"))
+console.log(b.outerHTML)
+// now we will remove the id attribute
+b.removeAttribute("id")
+console.log("This will also remove the id attribute")
+console.log(b.outerHTML)
+// now if we want to show all the attributes of a class we will type
+console.log(b.attributes)
+
+// now if want to create our custom attribute we are going to create them using the prefix data- as they are reserved for programmers
+b.setAttribute("data-game","mario")
+console.log(b.dataset.game)
+console.log(b.outerHTML)
+</script>
+</html>

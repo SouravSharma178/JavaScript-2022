@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<span>Start of the container (outer)</span>
+<div class="box">
+<p>Start of this container (inner)</p>
+This is a div tag
+<p>end of this container (inner)</p>
+</div>
+<span>End of the container(outer)</span>
+</body>
+<script>
+let a = document.getElementsByTagName('div')[0]
+let div1 = document.createElement('div')
+div1.innerHTML = '<h1>Hello world</h1>'
+
+// to see the output of below programs we have to uncomment the below lines
+//1.a.appendChild(div1)
+//a.prepend(div1)
+//a.before(div1)
+//4.a.after(div1)
+//a.replaceWith(div1)
+</script>
+</html>

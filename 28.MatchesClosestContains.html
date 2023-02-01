@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches_Closest_Contains</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="box" id="element1">
+            <span id="sp1">This is sp1</span>
+        </p>
+        <p id="element2">This is element 2</p>
+    </div>
+</body>
+<script>
+let val1 = document.getElementById("element1")
+let val2 = document.getElementById("element2")
+let sp1 = document.getElementById("sp1")
+// if class='box' is written inside the p tag of this element then it will return true else it will return false if it has a div container as its parent with the class="box"
+//Returns true if matching selectors against element’s root yields element; otherwise false.
+console.log(val1.matches(".box"))
+console.log(val2.matches(".box"))
+
+// closest it will find the closest element from itself to that particular class or id
+console.log(sp1.closest("#element1"))
+
+// contains will return a boolean value a
+console.log(sp1.contains(val1))
+console.log(val1.contains(sp1))
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!-- ***Important point to note here is that if we want to check whether whether we clicked the confirmed button or not we will follow the procedure on line 22 -->
+<!--
+a major limitation of alert,prompt and confirm is that all these stop the execution of our script and unitl and unless we close the window we will not be able to interact with the script
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+//1.alert is used to invoke a mini window to display a message
+alert("Are you sure you want to work on this page")
+
+//2.prompt - it is used to take input(as a string) from the user
+let a  = prompt("Enter the number","57");
+
+// confirm is used to confirm an action from the user
+let b = confirm("are you sure you want to write this to the document")
+if(b){
+    // document.write() will write the text to the document
+    document.write(a);
+}
+else{
+    document.write("The value was not written")
+}
+</script>
+</html>

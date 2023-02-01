@@ -1,0 +1,56 @@
+<!--
+Under the DOM tree there are three main types of nodes
+1. text nodes (title can be considered as a text node)
+2. element nodes
+3. comment nodes
+
+Child nodes -> direct as well as deeply nested elements of an element are called its children
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+Here div is the parent of paragraph(paragraph is the child of div) and this text is the the child of paragraph element
+-->
+<body><div class="myDiv"><p>This is a paragraph</p><span>This is the span element</span>
+</div>
+</body>
+<script>
+// typeof document.documentElement -> 'object'
+// typeof document.title -> 'string'
+
+
+// when we are using the firstChild then text nodes are also counted but when we are using firstElementChild the text nodes are not counted
+
+// 1.firstChild
+console.log("The first child elements are")
+console.log(document.body.firstChild)
+
+// 2.lastChild
+console.log("The last child elements are")
+console.log(document.body.lastChild)
+
+//3.childNodes
+let arr = Array.from(document.body.childNodes);
+console.log(arr)
+document.write(arr);
+
+// if we leave the white spaces then the text nodes are also counted
+
+
+//4.parentNode and parentElement
+// here we would get div as the first child
+let a = document.body.firstChild
+console.log(a)
+console.log("These are the parent nodes and parent elements")
+console.log(a.parentNode)
+console.log(a.parentElement);
+// this syntax means next sibling of the first child(p) that is span
+console.log(a.firstChild.nextSibling)
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!-- in this tutorial we are going to see the difference between firstChild and firstElementChild -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element only navigation</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li>Home</li>
+        <li>About us</li>
+        <li>Hire Me</li>
+    </ul>
+</nav>
+</body>
+<script>
+let b = document.body
+console.log("The first child of b is",b.firstChild)
+console.log("When we use firstElementChild the text nodes are not counted")
+console.log("The first child of b is",b.firstElementChild)
+console.log("The first child of b is",b.firstElementChild.style.color="red")
+</script>
+</html>

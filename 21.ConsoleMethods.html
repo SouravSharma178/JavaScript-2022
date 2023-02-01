@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <title>This is the Console Methods Tutorial</title>
+</body>
+<script>
+//1. here we are trying to log the console object itself
+console.log("This is the list of all objects present in the object itself ",console);
+
+// 2.this is error method of an object and it will be displayed in the error tab
+console.error("This is error method which is used to define/highlight and error");
+
+// 3.assert is used to check some condition and upon the failure of that condition we get a message of assertion failed
+console.assert(55>33)
+// this assertion will fail
+console.assert(55<33)
+
+// 4.clear (This will clear the entire console) and will print the message "console was cleared"
+//console.clear();
+
+//5.table - it prints the entire data in a tabular format
+const list = {
+    name:"Sourav",
+    surname:"Sharma",
+    age:100
+}
+console.table(list);
+
+// 6.warn - it is used to declare warnings and it will be displayed in the warnings tab
+console.warn("This is the warn method");
+
+// 7.info - it is used to print info on the info tab
+console.info("This is an info");
+
+// 8.time - it is used to check the time taken by a process
+console.time("P1")
+console.timeEnd("P1")
+</script>
+</html>

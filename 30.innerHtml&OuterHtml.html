@@ -1,0 +1,29 @@
+<!--
+If we do console.dir then we would get the output as an object
+but if we do console.log then we would get the output as an element
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerHtml&OuterHtml</title>
+</head>
+<body><span id="ele1">This is the span element</span>
+</body>
+<script>
+ele1.innerHTML = "Change the text"
+
+console.log("The inner HTML of ele1 is",ele1.innerHTML)
+console.log("The outer HTML of ele1 is",ele1.outerHTML)
+
+// innerHTML is only vald for element nodes and not comment and element nodes so to get the inner data we can also use the the .data or node value
+console.log(window.document.body.firstChild.nodeValue)
+console.log(window.document.body.firstChild.data)
+
+// textcontent (this is useful if we want to fetch the text of a website)
+console.log(window.document.body.firstElementChild.textContent)
+</script>
+</html>

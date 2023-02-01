@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjacent HTML</title>
+    <style>
+    .box{
+        border: 2px solid red;
+    }
+    </style>
+</head>
+<body>
+<div class="box">Inside the div container</div>
+</body>
+<script>
+let first = document.getElementsByClassName("box")[0]
+first.insertAdjacentHTML("beforeend","<h1>This is beforeend of this container</h1>")
+let second = document.getElementsByClassName("box")[0]
+second.insertAdjacentHTML("afterend","<h1>This is afterend of this container</h1>")
+let third = document.getElementsByClassName("box")[0]
+third.insertAdjacentHTML("beforebegin","<h1>This is beforebegin of this container</h1>")
+let fourth = document.getElementsByClassName("box")[0]
+fourth.insertAdjacentHTML("afterbegin","<h1>This is afterbegin of this container</h1>")
+
+// to remove an node we will use the method remove
+//ele.remove()
+</script>
+</html>

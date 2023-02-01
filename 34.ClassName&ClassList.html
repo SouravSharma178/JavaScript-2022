@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassName and ClassList</title>
+    <style>
+     .red{
+        background-color: red;
+     }
+     .text-dark{
+        color: black;
+        font-weight: 900;
+     }
+     .blue{
+        background-color: blue;
+        color: white;
+     }
+    </style>
+</head>
+<body>
+<p id="first">This is paragraph</p>
+</body>
+<script>
+let a = window.document.body.firstElementChild
+console.log(a);
+a.setAttribute("class","red text-dark")
+console.log(a.outerHTML)
+console.log("This is the class list",a.classList)
+a.classList.remove("red")
+console.log(a.classList)
+a.classList.add("blue")
+console.log(a.classList)
+console.log("Now to toggle a class we will use the following methods")
+//a.classList.toggle("blue")
+console.log("Now to check if a classList has the following classes")
+console.log(a.outerHTML)
+console.log(a.classList.contains("blue"))
+
+</script>
+</html>
